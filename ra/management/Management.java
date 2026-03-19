@@ -24,7 +24,7 @@ public class Management {
                 System.out.println("7: sap sep khoa hoc theo hoc phi giam dan");
                 System.out.println("8: thoat");
                 System.out.println("--------------------------------------------");
-                System.out.println("    -> ");
+                System.out.printf("    -> ");
 
 
                 int choice = Integer.parseInt(sc.nextLine());
