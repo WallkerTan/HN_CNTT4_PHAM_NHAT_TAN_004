@@ -112,7 +112,9 @@ public class CourseBusines {
     public void searchByIns(String instructor) {
         try {
             List<Course> c = courses.stream()
-                    .filter(e -> e.getName().toLowerCase().contains(instructor.toLowerCase(null))).toList();
+                    .filter(e -> e.getName().toLowerCase().contains(instructor.toLowerCase()))
+                    .toList();
+
             if (c.isEmpty()) {
                 System.out.println("khong tim thay khoa hoc nao");
                 return;
@@ -125,7 +127,6 @@ public class CourseBusines {
             System.out.println("loi tim kiem ten giang vien");
         }
     }
-
     public void sortByfeeDesc() {
         try {
             courses.stream().sorted((c1, c2) -> Double.compare(c1.getTuitionfee(), c2.getTuitionfee()))
